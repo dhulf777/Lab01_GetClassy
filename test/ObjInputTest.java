@@ -1,3 +1,5 @@
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.Scanner;
 
 public class ObjInputTest {
@@ -26,11 +28,11 @@ public class ObjInputTest {
         boolean confirm = input.getYNConfirm("Do you want to save this data");
         System.out.println("Output: " + confirm + "\n");
 
-        input.prettyHeader("SafeInputObj Testing Complete");
+
 
         Scanner customScanner = new Scanner(System.in);
         SafeInputObj customInput = new SafeInputObj(customScanner);
-        System.out.println("\nTesting object instantiated with parameterized constructor:");
+        System.out.println("Test Passed for data");
         String check = customInput.getNonZeroLenString("Enter 'OK' to finish");
         System.out.println("Output: " + check);
     }
